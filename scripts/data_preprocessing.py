@@ -52,6 +52,8 @@ def correct_data_types(df):
     df['sex'] = df['sex'].astype('category')
 
     return df
+
+
 def feature_engineering(df):
     # Calculate time-to-purchase in seconds
     df['time_to_purchase'] = (df['purchase_time'] - df['signup_time']).dt.total_seconds()
@@ -69,10 +71,15 @@ def feature_engineering(df):
 
     return df
 
-def encode_categorical_features(df):
-    """Encodes categorical features into numerical values."""
-    df_encoded = pd.get_dummies(df, columns=['source', 'browser', 'sex'])
-    return df_encoded
+from sklearn.preprocessing import LabelEncoder
+
+def encode_label_features(df):
+    le = LabelEncoder()
+    for column in ['source', 'browser', 'sex', 'device_id','country']:
+        df[column] = le.fit_transform(df[column])
+    return df
+
+
 
 def normalize_and_scale(df, feature_columns):
     """Normalizes and scales selected features."""
