@@ -1,3 +1,4 @@
 data
 .venv
 notebooks/mlruns
+scripts/model_building.py
