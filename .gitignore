@@ -1,2 +1,6 @@
 data
 .venv
+notebooks/RandomForestClassifier().pkl
+notebooks/merged_RandomForestClassifier().pkl
+notebooks/mlruns/
+
