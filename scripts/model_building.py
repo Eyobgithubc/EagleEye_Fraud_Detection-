@@ -15,6 +15,7 @@ from keras.models import Sequential
 from keras.layers import Dense, Conv1D, MaxPooling1D, Flatten, LSTM
 from keras.utils import to_categorical
 
+
 def data_preparation(fraud_data, credit_data):
     """
     Perform feature-target separation and train-test split for both fraud and credit datasets.

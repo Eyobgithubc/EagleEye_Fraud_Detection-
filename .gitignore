@@ -3,4 +3,5 @@ data
 notebooks/RandomForestClassifier().pkl
 notebooks/merged_RandomForestClassifier().pkl
 notebooks/mlruns/
+ .vscode/extensions.json
 
